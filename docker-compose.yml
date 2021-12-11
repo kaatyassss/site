@@ -1,0 +1,16 @@
+version: '3'
+services:
+    nginx:
+        image: nginx:latest
+        restart: always
+        ports:
+            - "9080:80"
+        volumes:
+            - ./nginx:/etc/nginx/conf.d
+            - ./app/public:/opt/www
+            - ./logs:/opt/logs
+    nodejs:
+        build: ./image
+        restart: always
+        volumes:
+            - ./app:/opt/app

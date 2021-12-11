@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список студентов</title>
+    <link rel="stylesheet" href="./tablee.css">
+</head>
+<body>
+<div><input class="buttonAdd" type="button" value="Добавить"></div>
+<table class="table2" id="tableName">
+    <tr class="tr1">
+        <th class="th11">Студент</th>
+        <th class="th11">Группа</th>
+        <th class="th11">Дата рождения</th>
+        <th class="th11">Номер телефона</th>
+        <th class="th11">Изменить</th>
+        <th class="th11">Удалить</th>
+    </tr>
+    <tbody class="table">
+    </tbody>
+</table>
+<div id="windowAdd" class="windowAdd1" style="display: none">
+    <a class="close closeWindow"></a>
+    <p class="p1"><b>Заполните форму</b></p>
+    <form class="addForm">
+        <table class="table3">
+            <tr class="tr2">
+                <th>Студент</th>
+                <td><input type="text" class="name" name="name" placeholder="Введите ФИО"></td>
+            </tr>
+            <tr class="tr2">
+                <th>Группа</th>
+                <td><input type="text" class="group" name="group" placeholder="Введите группу"></td>
+            </tr>
+            <tr class="tr2">
+                <th>Дата рождения</th>
+                <td><input type="date" class="data" name="data" placeholder="Введите дату"></td>
+            </tr>
+            <tr class="tr2">
+                <th>Номер телефона</th>
+                <td><input type="tel" class="phone" name="phone" placeholder="Введите номер"></td>
+            </tr>
+        </table>
+        <button type="submit" class="buttonAdd1 subAdd" id="subAdd">Добавить</button>
+    </form>
+</div>
+<div id="windowDel" class="windowDel" style="display: none">
+    <a class="close1 closeWindow"></a>
+    <p class="p1"><b>Вы уверены, что хотите удалить студента из списка?</b></p>
+    <button class="buttond" id="subDel" type="button">Удалить</button>
+</div>
+<script src="./script.js"></script>
+</body>
+</html>
